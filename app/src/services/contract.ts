@@ -1,4 +1,4 @@
-export const address = "0x07993e27B68477f16961CDCaB932aB95e5F7f914";
+export const address = "0xD04e15Aa676A2A7D2738B2243D1e4A8787Cd4548";
 export const CONTRACT = [
 	{
 		"inputs": [],
