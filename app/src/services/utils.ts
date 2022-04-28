@@ -1,8 +1,8 @@
 import Web3 from "web3";
 import { CONTRACT, address } from "./contract";
-import { TOKEN_KEY } from "./authProvider";
 
-const web3 = new Web3(window.ethereum);
+export const TOKEN_KEY = "ff-auth";
+const web3 = new Web3(window.ethereum as any);
 
 export const getContract = () => {
   return new web3.eth.Contract(CONTRACT, address);

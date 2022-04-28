@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { isOwner } from "../services/utils";
+import { isOwner } from "./services/utils";
 
 function Header() {
   const [top, setTop] = useState(true);
-  const [address, setAddress] = useState(null);
   const [isOwnerBool, setIsOwner] = useState(false);
 
   useEffect(() => {
@@ -44,29 +43,7 @@ function Header() {
               </svg>
             </Link>
           </div>
-
-          {/* Site navigation */}
-          {!window.ethereum._state.initialized && (
-            <h1>Web3/MetaMask not connect, please reload the page!</h1>
-          )}
-          <nav className="flex flex-grow">
-            <ul className="flex flex-grow justify-end flex-wrap items-center">
-              <li>
-                {address && address != "" && <h2>{address}</h2>}
-                {!address && (
-                  <button
-                    onClick={async () => {
-                      console.log("manually envoked login");
-                      window.history.go();
-                    }}
-                    className="btn text-white bg-brand-600 hover:bg-brand-600/80 w-full mb-4 sm:w-auto sm:mb-0"
-                  >
-                    CONNECT
-                  </button>
-                )}
-              </li>
-            </ul>
-          </nav>
+        <h1>Vite App</h1>
         </div>
       </div>
       <hr className="bg-brand-600 h-1/2 mb-4" />

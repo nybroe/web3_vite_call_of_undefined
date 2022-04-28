@@ -4,8 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import "./css/style.scss";
 
 import AOS from "aos";
-import Home from "./pages/Home";
-import { authProvider } from "./services/authProvider";
+import Header from "./Header";
 
 function App() {
   const location = useLocation();
@@ -17,13 +16,6 @@ function App() {
       duration: 700,
       easing: "ease-out-cubic",
     });
-    setTimeout(async () => {
-      await authProvider.login();
-      window.ethereum.on("accountsChanged", async (accounts) => {
-        await authProvider.login();
-        window.history.go();
-      });
-    }, 0);
   });
 
   useEffect(() => {
@@ -35,7 +27,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Header />} />
       </Routes>
     </>
   );
