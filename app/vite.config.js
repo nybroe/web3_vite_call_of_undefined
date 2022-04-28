@@ -1,5 +1,4 @@
 import { defineConfig } from "vite";
-import postcss from "./postcss.config.js";
 import react from "@vitejs/plugin-react";
 import { NodeGlobalsPolyfillPlugin } from "@esbuild-plugins/node-globals-polyfill";
 import nodePolyfills from 'rollup-plugin-node-polyfills';
@@ -32,9 +31,6 @@ export default defineConfig({
         }),
       ],
     },
-  },
-  css: {
-    postcss,
   },
   plugins: [react()],
   // resolve: {
