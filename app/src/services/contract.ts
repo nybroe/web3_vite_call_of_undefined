@@ -1,6 +1,11 @@
 export const address = "0x07993e27B68477f16961CDCaB932aB95e5F7f914";
 export const CONTRACT = [
 	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "address",
@@ -18,5 +23,5 @@ export const CONTRACT = [
 		],
 		"stateMutability": "view",
 		"type": "function"
-	},
+	}
 ]
